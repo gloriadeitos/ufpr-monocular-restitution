@@ -53,9 +53,7 @@ const Header = () => {
 
                         <div className="h-6 border-l border-gray-400 mx-3" />
 
-                        <a href="/login" aria-label="User login">
-                            <img src={gloriadeitosLogo} alt="Logo Gloriadeitos" className="h-8 w-auto" />
-                        </a>
+                        <img src={gloriadeitosLogo} alt="Logo Gloriadeitos" className="h-8 w-auto" />
                     </div>
 
                     {/* Botão menu mobile - só aparece no mobile */}
@@ -106,9 +104,7 @@ const Header = () => {
                 {/* Container centralizado com logo + barra vertical + ícones */}
                 <div className="flex justify-center items-center space-x-9 py-1 mb-4">
                     {/* Logo Glória */}
-                    <a href="/login" aria-label="User login" className="flex items-center">
-                        <img src={gloriadeitosLogo} alt="Logo Gloriadeitos" className="h-10 w-auto" />
-                    </a>
+                    <img src={gloriadeitosLogo} alt="Logo Gloriadeitos" className="h-10 w-auto" />
 
                     {/* Barra vertical */}
                     <div className="h-8 border-l border-gray-400 mt-1 md:mt-3" />
