@@ -15,7 +15,8 @@ import Footer from './components/footer';
 
 function App() {
   return (
-    <Router>
+    // <Router>
+    <Router basename="/ufpr-monocular-restitution">
       <Header />
 
       <div className="content">

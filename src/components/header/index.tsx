@@ -1,4 +1,5 @@
 import './styles.css';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon, faLinkedin, faGithub, faInstagram } from '../../utils/icons';
 
 import ufpr from '../../assets/header/ufpr.png';
@@ -8,6 +9,8 @@ import gloriadeitosLogo from '../../assets/header/gloriadeitos-logo.png';
 import { useState } from 'react';
 
 const Header = () => {
+    const navigate = useNavigate();
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -25,7 +28,7 @@ const Header = () => {
                     <div className="hidden md:block h-6 border-l border-gray-400 mx-3" />
 
                     <a
-                        href="/"
+                        onClick={() => navigate('/')}
                         className="text-1xl font-bold whitespace-nowrap ml-2 md:ml-0 text-[#214f6d]">
                         Restituição Monocular
                     </a>
@@ -33,9 +36,9 @@ const Header = () => {
 
                 {/* Centro - menu fixado no centro da tela, só aparece em md+ */}
                 <div className="hidden md:flex space-x-6 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                    <a href="/" className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Home</a>
-                    <a href="/sobre" className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Sobre</a>
-                    <a href="/enunciado" className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Enunciado</a>
+                    <a onClick={() => navigate('/')} className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Home</a>
+                    <a onClick={() => navigate('/sobre')} className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Sobre</a>
+                    <a onClick={() => navigate('/enunciado')} className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Enunciado</a>
                 </div>
 
                 {/* Direita */}
@@ -80,21 +83,27 @@ const Header = () => {
                 {/* Links principais centralizados, com fonte maior e espaçamento */}
                 <div className="flex flex-col items-center py-6 space-y-6">
                     <a
-                        href="/"
-                        className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={() => {
+                            navigate('/');
+                            setMenuOpen(false);
+                        }}
+                        className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]">
                         Home
                     </a>
                     <a
-                        href="/sobre"
-                        className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={() => {
+                            navigate('/sobre');
+                            setMenuOpen(false);
+                        }}
+                        className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]">
                         Sobre
                     </a>
                     <a
-                        href="/enunciado"
-                        className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={() => {
+                            navigate('/enunciado');
+                            setMenuOpen(false);
+                        }}
+                        className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]">
                         Enunciado
                     </a>
                 </div>
