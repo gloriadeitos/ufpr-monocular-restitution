@@ -13,7 +13,7 @@ const Header = () => {
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     return (
-        <header className="header-bg bg-white shadow-md fixed w-full z-10 transition-colors duration-300">
+        <header className="header-bg bg-white shadow-md fixed w-full z-10 top-0 transition-colors duration-300">
             <nav className="container mx-auto px-6 py-3 flex items-center relative">
                 {/* Esquerda */}
                 <div className="flex items-center space-x-1 md:space-x-1 sm:space-x-1.5 z-20">
@@ -25,7 +25,7 @@ const Header = () => {
                     <div className="hidden md:block h-6 border-l border-gray-400 mx-3" />
 
                     <a
-                        href="#"
+                        href="/"
                         className="text-1xl font-bold whitespace-nowrap ml-2 md:ml-0 text-[#214f6d]">
                         Restituição Monocular
                     </a>
@@ -33,8 +33,9 @@ const Header = () => {
 
                 {/* Centro - menu fixado no centro da tela, só aparece em md+ */}
                 <div className="hidden md:flex space-x-6 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                    <a href="#about" className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Sobre</a>
-                    <a href="#projects" className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Projects</a>
+                    <a href="/" className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Home</a>
+                    <a href="/sobre" className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Sobre</a>
+                    <a href="/enunciado" className="hover:text-primary-light transition-colors duration-300 text-[#214f6d]">Enunciado</a>
                 </div>
 
                 {/* Direita */}
@@ -79,22 +80,22 @@ const Header = () => {
                 {/* Links principais centralizados, com fonte maior e espaçamento */}
                 <div className="flex flex-col items-center py-6 space-y-6">
                     <a
-                        href="#about"
+                        href="/"
+                        className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]"
+                        onClick={() => setMenuOpen(false)}>
+                        Home
+                    </a>
+                    <a
+                        href="/sobre"
                         className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]"
                         onClick={() => setMenuOpen(false)}>
                         Sobre
                     </a>
                     <a
-                        href="#projects"
+                        href="/enunciado"
                         className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]"
                         onClick={() => setMenuOpen(false)}>
-                        Projects
-                    </a>
-                    <a
-                        href="#contact"
-                        className="text-lg font-semibold hover:text-primary-light transition-colors duration-300 text-[#214f6d]"
-                        onClick={() => setMenuOpen(false)}>
-                        Contact
+                        Enunciado
                     </a>
                 </div>
 

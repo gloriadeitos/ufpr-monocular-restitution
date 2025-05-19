@@ -3,7 +3,7 @@ import './styles.css';
 const Home = () => {
     return (
         <div>
-            <p>aaaaaaaaaaaaaaaa</p>
+            <p>Pagina Enunciado</p>
         </div>
     );
 }

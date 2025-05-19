@@ -1,0 +1,9 @@
+.content {
+    margin-top: 90px;
+    margin-bottom: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: calc(100vh - 100px);
+    box-sizing: border-box;
+    text-align: justify;
+}
