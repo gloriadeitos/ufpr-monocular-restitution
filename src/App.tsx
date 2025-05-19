@@ -10,7 +10,8 @@ import Home from './pages/Home'
 
 function App() {
   return (
-    <Router basename="/dev/gloria/DGEOMdocs">
+    // <Router basename="/ufpr-monocular-restitution">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
