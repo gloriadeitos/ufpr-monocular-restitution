@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/ufpr-monocular-restitution/', // Substitua pelo caminho desejado
+  // base: '/ufpr-monocular-restitution/',
   plugins: [
     react(),
     tailwindcss(),

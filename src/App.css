@@ -1,9 +1,10 @@
 .content {
     margin-top: 90px;
-    margin-bottom: 80px;
     margin-left: 20px;
     margin-right: 20px;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px); /* altura total menos espaço do header/algum topo */
     box-sizing: border-box;
     text-align: justify;
+
+    padding-bottom: 90px; /* altura do rodapé */
 }
